@@ -4,8 +4,9 @@ from email.mime.text import MIMEText
 from email.mime.base import MIMEBase
 from email import encoders
 import os
-from robot.api.deco import keyword
+from robot.api.deco import keyword, library
 
+@library
 class EmailNotifier:
     def __init__(self, smtp_server=None, smtp_port=None, username=None, password=None):
         # Valeurs par défaut qui peuvent être surchargées

@@ -1,7 +1,9 @@
 import logging
+from robot.api.deco import keyword, library
 from robot.api import logger
 from datetime import datetime
 
+@library
 class EnhancedLogging:
     def __init__(self):
         # Configuration du logger Python
@@ -17,6 +19,7 @@ class EnhancedLogging:
         file_handler.setFormatter(formatter)
         self.logger.addHandler(file_handler)
 
+    @keyword("Logging Timestamp")
     def log_with_timestamp(self, message, level="INFO"):
         """Log un message avec timestamp et niveau personnalisé."""
         timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S.%f")[:-3]
@@ -34,6 +37,7 @@ class EnhancedLogging:
         # Log également dans le fichier
         self.logger.log(getattr(logging, level.upper()), message)
 
+    @keyword("Log Step Test")
     def log_test_step(self, step_name, step_data=None):
         """Log une étape de test avec données optionnelles."""
         message = f"ÉTAPE: {step_name}"

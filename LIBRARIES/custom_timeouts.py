@@ -1,7 +1,8 @@
 import time
-from robot.api.deco import keyword
+from robot.api.deco import keyword, library
 from robot.libraries.BuiltIn import BuiltIn
 
+@library
 class DynamicTimeouts:
     def __init__(self):
         self.default_timeout = 10  # secondes
@@ -28,11 +29,6 @@ class DynamicTimeouts:
         elif connection_type.lower() == "fast":
             timeout *= self.fast_connection_factor
 
-        # Ajuster le timeout selon l'environnement d'exécution
-        env = BuiltIn().get_variable_value("${ENV}", "dev")
-        if env == "prod":
-            timeout *= 1.2  # Augmenter le timeout en production
-
         start_time = time.time()
         attempts = 0
 
@@ -52,5 +48,4 @@ class DynamicTimeouts:
                     start_time = time.time()
                 else:
                     raise TimeoutError(f"Timeout dépassé après {max_retries} tentatives")
-
             time.sleep(0.5)  # Pause avant nouvelle vérification

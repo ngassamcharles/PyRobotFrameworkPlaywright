@@ -1,5 +1,5 @@
 *** Settings ***
-Library  ${CURDIR}/../LIBRARIES/custom_keywords.py
+Library  ../LIBRARIES/custom_reports.py
 
 Resource  ../RESOURCES/PAGES/login_page.resource
 Resource  ../RESOURCES/custom_libs_api.resource
@@ -21,8 +21,5 @@ Test De Login UI
     Entrer le username    ${USERNAME}
     Entrer le password    ${PASSWORD}
     Login
-
-Test API
-    get request    ${API_URL}
-    post request    ${API_URL}
+    Generer Rapport Personnelle   ${OUTPUT_FILE}
 

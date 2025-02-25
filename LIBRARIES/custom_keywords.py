@@ -1,8 +1,9 @@
-from robot.api.deco import keyword
+from robot.api.deco import keyword, library
 import re
 import random
 import string
 
+@library
 class CustomKeywords:
     """Bibliothèque de mots-clés personnalisés pour les tests UI."""
 

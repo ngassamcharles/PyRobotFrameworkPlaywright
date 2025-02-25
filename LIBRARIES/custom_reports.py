@@ -2,14 +2,16 @@ import os
 import json
 from datetime import datetime
 from robot.api import ExecutionResult
-from robot.api.deco import keyword
+from robot.api.deco import keyword, library
 
+
+@library
 class CustomReporter:
     def __init__(self):
         self.report_dir = "custom_reports"
         os.makedirs(self.report_dir, exist_ok=True)
 
-    @keyword("Générer Rapport Personnalisé")
+    @keyword("Generer Rapport Personnelle")
     def generate_custom_report(self, output_xml_path, include_screenshots=True):
         """
         Génère un rapport personnalisé à partir du fichier output.xml de Robot Framework.
