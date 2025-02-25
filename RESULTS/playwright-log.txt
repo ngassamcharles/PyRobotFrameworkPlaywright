@@ -1,32 +1,38 @@
-{"level":30,"time":"2025-02-25T10:45:18.783Z","pid":61711,"hostname":"MacBook-Pro-de-Charles.local","msg":"Listening on 54264"}
-(node:61711) DeprecationWarning: Calling start() is no longer necessary. It can be safely omitted.
+{"level":30,"time":"2025-02-25T14:07:49.036Z","pid":84227,"hostname":"MacBook-Pro-de-Charles.local","msg":"Listening on 54583"}
+(node:84227) DeprecationWarning: Calling start() is no longer necessary. It can be safely omitted.
 (Use `node --trace-deprecation ...` to show where the warning was created)
-{"level":30,"time":"2025-02-25T10:45:19.866Z","pid":61711,"hostname":"MacBook-Pro-de-Charles.local","msg":"Start of node method newBrowser"}
-{"level":30,"time":"2025-02-25T10:45:20.197Z","pid":61711,"hostname":"MacBook-Pro-de-Charles.local","msg":"Adding browser to stack: chromium, version: 133.0.6943.16"}
-{"level":30,"time":"2025-02-25T10:45:20.198Z","pid":61711,"hostname":"MacBook-Pro-de-Charles.local","msg":"End of node method newBrowser"}
-{"level":30,"time":"2025-02-25T10:45:20.197Z","pid":61711,"hostname":"MacBook-Pro-de-Charles.local","msg":"Adding 0 contexts to browser"}
-{"level":30,"time":"2025-02-25T10:45:20.201Z","pid":61711,"hostname":"MacBook-Pro-de-Charles.local","msg":"Start of node method newPage"}
-{"level":30,"time":"2025-02-25T10:45:20.201Z","pid":61711,"hostname":"MacBook-Pro-de-Charles.local","msg":"currentBrowser: [object Object]"}
-{"level":30,"time":"2025-02-25T10:45:20.206Z","pid":61711,"hostname":"MacBook-Pro-de-Charles.local","msg":"Changed active context"}
-{"level":30,"time":"2025-02-25T10:45:20.405Z","pid":61711,"hostname":"MacBook-Pro-de-Charles.local","msg":"Video path: undefined"}
-{"level":30,"time":"2025-02-25T10:45:20.406Z","pid":61711,"hostname":"MacBook-Pro-de-Charles.local","msg":"Changed active page"}
-{"level":30,"time":"2025-02-25T10:45:20.829Z","pid":61711,"hostname":"MacBook-Pro-de-Charles.local","msg":"End of node method newPage"}
-{"level":30,"time":"2025-02-25T10:45:20.831Z","pid":61711,"hostname":"MacBook-Pro-de-Charles.local","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2025-02-25T10:45:20.834Z","pid":61711,"hostname":"MacBook-Pro-de-Charles.local","msg":"End of node method getBrowserCatalog"}
-{"level":30,"time":"2025-02-25T10:45:20.836Z","pid":61711,"hostname":"MacBook-Pro-de-Charles.local","msg":"Start of node method fillText"}
-{"level":30,"time":"2025-02-25T10:45:20.837Z","pid":61711,"hostname":"MacBook-Pro-de-Charles.local","msg":"Strict mode is enabled, find Locator with #user-name in page."}
-{"level":30,"time":"2025-02-25T10:45:20.853Z","pid":61711,"hostname":"MacBook-Pro-de-Charles.local","msg":"End of node method fillText"}
-{"level":30,"time":"2025-02-25T10:45:20.855Z","pid":61711,"hostname":"MacBook-Pro-de-Charles.local","msg":"Start of node method fillText"}
-{"level":30,"time":"2025-02-25T10:45:20.855Z","pid":61711,"hostname":"MacBook-Pro-de-Charles.local","msg":"Strict mode is enabled, find Locator with #password in page."}
-{"level":30,"time":"2025-02-25T10:45:20.882Z","pid":61711,"hostname":"MacBook-Pro-de-Charles.local","msg":"End of node method fillText"}
-{"level":30,"time":"2025-02-25T10:45:20.884Z","pid":61711,"hostname":"MacBook-Pro-de-Charles.local","msg":"Start of node method click"}
-{"level":30,"time":"2025-02-25T10:45:20.884Z","pid":61711,"hostname":"MacBook-Pro-de-Charles.local","msg":"Strict mode is enabled, find Locator with #login-button in page."}
-{"level":30,"time":"2025-02-25T10:45:21.018Z","pid":61711,"hostname":"MacBook-Pro-de-Charles.local","msg":"End of node method click"}
-{"level":30,"time":"2025-02-25T10:45:21.020Z","pid":61711,"hostname":"MacBook-Pro-de-Charles.local","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2025-02-25T10:45:21.021Z","pid":61711,"hostname":"MacBook-Pro-de-Charles.local","msg":"End of node method getBrowserCatalog"}
-{"level":30,"time":"2025-02-25T10:45:21.023Z","pid":61711,"hostname":"MacBook-Pro-de-Charles.local","msg":"Start of node method closeBrowser"}
-{"level":30,"time":"2025-02-25T10:45:21.027Z","pid":61711,"hostname":"MacBook-Pro-de-Charles.local","msg":"Removed page=863d6869-68c5-478e-820a-f29c25851f83 from context=725cc1a7-f4e2-4609-9315-a16c36d5f7ca page stack"}
-{"level":30,"time":"2025-02-25T10:45:21.417Z","pid":61711,"hostname":"MacBook-Pro-de-Charles.local","msg":"End of node method closeBrowser"}
+{"level":30,"time":"2025-02-25T14:07:50.089Z","pid":84227,"hostname":"MacBook-Pro-de-Charles.local","msg":"Start of node method newBrowser"}
+{"level":30,"time":"2025-02-25T14:07:50.588Z","pid":84227,"hostname":"MacBook-Pro-de-Charles.local","msg":"Adding browser to stack: chromium, version: 133.0.6943.16"}
+{"level":30,"time":"2025-02-25T14:07:50.588Z","pid":84227,"hostname":"MacBook-Pro-de-Charles.local","msg":"End of node method newBrowser"}
+{"level":30,"time":"2025-02-25T14:07:50.588Z","pid":84227,"hostname":"MacBook-Pro-de-Charles.local","msg":"Adding 0 contexts to browser"}
+{"level":30,"time":"2025-02-25T14:07:50.591Z","pid":84227,"hostname":"MacBook-Pro-de-Charles.local","msg":"Start of node method newPage"}
+{"level":30,"time":"2025-02-25T14:07:50.591Z","pid":84227,"hostname":"MacBook-Pro-de-Charles.local","msg":"currentBrowser: [object Object]"}
+{"level":30,"time":"2025-02-25T14:07:50.606Z","pid":84227,"hostname":"MacBook-Pro-de-Charles.local","msg":"Changed active context"}
+{"level":30,"time":"2025-02-25T14:07:50.843Z","pid":84227,"hostname":"MacBook-Pro-de-Charles.local","msg":"Video path: undefined"}
+{"level":30,"time":"2025-02-25T14:07:50.844Z","pid":84227,"hostname":"MacBook-Pro-de-Charles.local","msg":"Changed active page"}
+{"level":30,"time":"2025-02-25T14:07:51.269Z","pid":84227,"hostname":"MacBook-Pro-de-Charles.local","msg":"End of node method newPage"}
+{"level":30,"time":"2025-02-25T14:07:51.271Z","pid":84227,"hostname":"MacBook-Pro-de-Charles.local","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-02-25T14:07:51.275Z","pid":84227,"hostname":"MacBook-Pro-de-Charles.local","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-02-25T14:07:51.277Z","pid":84227,"hostname":"MacBook-Pro-de-Charles.local","msg":"Start of node method fillText"}
+{"level":30,"time":"2025-02-25T14:07:51.278Z","pid":84227,"hostname":"MacBook-Pro-de-Charles.local","msg":"Strict mode is enabled, find Locator with #user-name in page."}
+{"level":30,"time":"2025-02-25T14:07:51.296Z","pid":84227,"hostname":"MacBook-Pro-de-Charles.local","msg":"End of node method fillText"}
+{"level":30,"time":"2025-02-25T14:07:51.298Z","pid":84227,"hostname":"MacBook-Pro-de-Charles.local","msg":"Start of node method fillText"}
+{"level":30,"time":"2025-02-25T14:07:51.298Z","pid":84227,"hostname":"MacBook-Pro-de-Charles.local","msg":"Strict mode is enabled, find Locator with #password in page."}
+{"level":30,"time":"2025-02-25T14:07:51.323Z","pid":84227,"hostname":"MacBook-Pro-de-Charles.local","msg":"End of node method fillText"}
+{"level":30,"time":"2025-02-25T14:07:51.325Z","pid":84227,"hostname":"MacBook-Pro-de-Charles.local","msg":"Start of node method click"}
+{"level":30,"time":"2025-02-25T14:07:51.325Z","pid":84227,"hostname":"MacBook-Pro-de-Charles.local","msg":"Strict mode is enabled, find Locator with #login-button in page."}
+{"level":30,"time":"2025-02-25T14:07:51.375Z","pid":84227,"hostname":"MacBook-Pro-de-Charles.local","msg":"End of node method click"}
+{"level":30,"time":"2025-02-25T14:07:51.378Z","pid":84227,"hostname":"MacBook-Pro-de-Charles.local","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-02-25T14:07:51.379Z","pid":84227,"hostname":"MacBook-Pro-de-Charles.local","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-02-25T14:07:51.381Z","pid":84227,"hostname":"MacBook-Pro-de-Charles.local","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-02-25T14:07:51.381Z","pid":84227,"hostname":"MacBook-Pro-de-Charles.local","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-02-25T14:07:51.383Z","pid":84227,"hostname":"MacBook-Pro-de-Charles.local","msg":"Start of node method httpRequest"}
+{"level":30,"time":"2025-02-25T14:07:51.740Z","pid":84227,"hostname":"MacBook-Pro-de-Charles.local","msg":"End of node method httpRequest"}
+{"level":30,"time":"2025-02-25T14:07:51.746Z","pid":84227,"hostname":"MacBook-Pro-de-Charles.local","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-02-25T14:07:51.747Z","pid":84227,"hostname":"MacBook-Pro-de-Charles.local","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-02-25T14:07:51.749Z","pid":84227,"hostname":"MacBook-Pro-de-Charles.local","msg":"Start of node method closeBrowser"}
+{"level":30,"time":"2025-02-25T14:07:51.757Z","pid":84227,"hostname":"MacBook-Pro-de-Charles.local","msg":"Removed page=17b3f23d-a841-4169-91dd-73ecd1844bd5 from context=3fe22fe4-5ef8-4985-8de1-ba36ee226b0d page stack"}
+{"level":30,"time":"2025-02-25T14:07:51.849Z","pid":84227,"hostname":"MacBook-Pro-de-Charles.local","msg":"End of node method closeBrowser"}
 ================= Original suppressed error =================
 Error: Browser has been closed.
     at PlaywrightState.getActiveBrowser (/Users/cwilfrid/AquaProjects/poc-robot-framework-playwright/.venv/lib/python3.13/site-packages/Browser/wrapper/index.js:12223:15)
@@ -40,7 +46,7 @@ Error: Browser has been closed.
     at endReadableNT (node:internal/streams/readable:1698:12)
     at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
 =============================================================
-{"level":30,"time":"2025-02-25T10:45:21.419Z","pid":61711,"hostname":"MacBook-Pro-de-Charles.local","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2025-02-25T10:45:21.419Z","pid":61711,"hostname":"MacBook-Pro-de-Charles.local","msg":"End of node method getBrowserCatalog"}
-{"level":30,"time":"2025-02-25T10:45:21.427Z","pid":61711,"hostname":"MacBook-Pro-de-Charles.local","msg":"Start of node method closeAllBrowsers"}
-{"level":30,"time":"2025-02-25T10:45:21.428Z","pid":61711,"hostname":"MacBook-Pro-de-Charles.local","msg":"End of node method closeAllBrowsers"}
+{"level":30,"time":"2025-02-25T14:07:51.851Z","pid":84227,"hostname":"MacBook-Pro-de-Charles.local","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-02-25T14:07:51.851Z","pid":84227,"hostname":"MacBook-Pro-de-Charles.local","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-02-25T14:07:51.864Z","pid":84227,"hostname":"MacBook-Pro-de-Charles.local","msg":"Start of node method closeAllBrowsers"}
+{"level":30,"time":"2025-02-25T14:07:51.865Z","pid":84227,"hostname":"MacBook-Pro-de-Charles.local","msg":"End of node method closeAllBrowsers"}
