@@ -1,0 +1,46 @@
+{"level":30,"time":"2025-02-25T10:45:18.783Z","pid":61711,"hostname":"MacBook-Pro-de-Charles.local","msg":"Listening on 54264"}
+(node:61711) DeprecationWarning: Calling start() is no longer necessary. It can be safely omitted.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+{"level":30,"time":"2025-02-25T10:45:19.866Z","pid":61711,"hostname":"MacBook-Pro-de-Charles.local","msg":"Start of node method newBrowser"}
+{"level":30,"time":"2025-02-25T10:45:20.197Z","pid":61711,"hostname":"MacBook-Pro-de-Charles.local","msg":"Adding browser to stack: chromium, version: 133.0.6943.16"}
+{"level":30,"time":"2025-02-25T10:45:20.198Z","pid":61711,"hostname":"MacBook-Pro-de-Charles.local","msg":"End of node method newBrowser"}
+{"level":30,"time":"2025-02-25T10:45:20.197Z","pid":61711,"hostname":"MacBook-Pro-de-Charles.local","msg":"Adding 0 contexts to browser"}
+{"level":30,"time":"2025-02-25T10:45:20.201Z","pid":61711,"hostname":"MacBook-Pro-de-Charles.local","msg":"Start of node method newPage"}
+{"level":30,"time":"2025-02-25T10:45:20.201Z","pid":61711,"hostname":"MacBook-Pro-de-Charles.local","msg":"currentBrowser: [object Object]"}
+{"level":30,"time":"2025-02-25T10:45:20.206Z","pid":61711,"hostname":"MacBook-Pro-de-Charles.local","msg":"Changed active context"}
+{"level":30,"time":"2025-02-25T10:45:20.405Z","pid":61711,"hostname":"MacBook-Pro-de-Charles.local","msg":"Video path: undefined"}
+{"level":30,"time":"2025-02-25T10:45:20.406Z","pid":61711,"hostname":"MacBook-Pro-de-Charles.local","msg":"Changed active page"}
+{"level":30,"time":"2025-02-25T10:45:20.829Z","pid":61711,"hostname":"MacBook-Pro-de-Charles.local","msg":"End of node method newPage"}
+{"level":30,"time":"2025-02-25T10:45:20.831Z","pid":61711,"hostname":"MacBook-Pro-de-Charles.local","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-02-25T10:45:20.834Z","pid":61711,"hostname":"MacBook-Pro-de-Charles.local","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-02-25T10:45:20.836Z","pid":61711,"hostname":"MacBook-Pro-de-Charles.local","msg":"Start of node method fillText"}
+{"level":30,"time":"2025-02-25T10:45:20.837Z","pid":61711,"hostname":"MacBook-Pro-de-Charles.local","msg":"Strict mode is enabled, find Locator with #user-name in page."}
+{"level":30,"time":"2025-02-25T10:45:20.853Z","pid":61711,"hostname":"MacBook-Pro-de-Charles.local","msg":"End of node method fillText"}
+{"level":30,"time":"2025-02-25T10:45:20.855Z","pid":61711,"hostname":"MacBook-Pro-de-Charles.local","msg":"Start of node method fillText"}
+{"level":30,"time":"2025-02-25T10:45:20.855Z","pid":61711,"hostname":"MacBook-Pro-de-Charles.local","msg":"Strict mode is enabled, find Locator with #password in page."}
+{"level":30,"time":"2025-02-25T10:45:20.882Z","pid":61711,"hostname":"MacBook-Pro-de-Charles.local","msg":"End of node method fillText"}
+{"level":30,"time":"2025-02-25T10:45:20.884Z","pid":61711,"hostname":"MacBook-Pro-de-Charles.local","msg":"Start of node method click"}
+{"level":30,"time":"2025-02-25T10:45:20.884Z","pid":61711,"hostname":"MacBook-Pro-de-Charles.local","msg":"Strict mode is enabled, find Locator with #login-button in page."}
+{"level":30,"time":"2025-02-25T10:45:21.018Z","pid":61711,"hostname":"MacBook-Pro-de-Charles.local","msg":"End of node method click"}
+{"level":30,"time":"2025-02-25T10:45:21.020Z","pid":61711,"hostname":"MacBook-Pro-de-Charles.local","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-02-25T10:45:21.021Z","pid":61711,"hostname":"MacBook-Pro-de-Charles.local","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-02-25T10:45:21.023Z","pid":61711,"hostname":"MacBook-Pro-de-Charles.local","msg":"Start of node method closeBrowser"}
+{"level":30,"time":"2025-02-25T10:45:21.027Z","pid":61711,"hostname":"MacBook-Pro-de-Charles.local","msg":"Removed page=863d6869-68c5-478e-820a-f29c25851f83 from context=725cc1a7-f4e2-4609-9315-a16c36d5f7ca page stack"}
+{"level":30,"time":"2025-02-25T10:45:21.417Z","pid":61711,"hostname":"MacBook-Pro-de-Charles.local","msg":"End of node method closeBrowser"}
+================= Original suppressed error =================
+Error: Browser has been closed.
+    at PlaywrightState.getActiveBrowser (/Users/cwilfrid/AquaProjects/poc-robot-framework-playwright/.venv/lib/python3.13/site-packages/Browser/wrapper/index.js:12223:15)
+    at PlaywrightServer.getActiveBrowser (/Users/cwilfrid/AquaProjects/poc-robot-framework-playwright/.venv/lib/python3.13/site-packages/Browser/wrapper/index.js:13119:59)
+    at PlaywrightServer.setTimeout (/Users/cwilfrid/AquaProjects/poc-robot-framework-playwright/.venv/lib/python3.13/site-packages/Browser/wrapper/index.js:13367:57)
+    at Object.onReceiveHalfClose (/Users/cwilfrid/AquaProjects/poc-robot-framework-playwright/.venv/lib/python3.13/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server.js:1425:25)
+    at BaseServerInterceptingCall.maybePushNextMessage (/Users/cwilfrid/AquaProjects/poc-robot-framework-playwright/.venv/lib/python3.13/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-interceptors.js:570:31)
+    at BaseServerInterceptingCall.handleEndEvent (/Users/cwilfrid/AquaProjects/poc-robot-framework-playwright/.venv/lib/python3.13/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-interceptors.js:610:14)
+    at ServerHttp2Stream.<anonymous> (/Users/cwilfrid/AquaProjects/poc-robot-framework-playwright/.venv/lib/python3.13/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-interceptors.js:377:18)
+    at ServerHttp2Stream.emit (node:events:536:35)
+    at endReadableNT (node:internal/streams/readable:1698:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
+=============================================================
+{"level":30,"time":"2025-02-25T10:45:21.419Z","pid":61711,"hostname":"MacBook-Pro-de-Charles.local","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-02-25T10:45:21.419Z","pid":61711,"hostname":"MacBook-Pro-de-Charles.local","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-02-25T10:45:21.427Z","pid":61711,"hostname":"MacBook-Pro-de-Charles.local","msg":"Start of node method closeAllBrowsers"}
+{"level":30,"time":"2025-02-25T10:45:21.428Z","pid":61711,"hostname":"MacBook-Pro-de-Charles.local","msg":"End of node method closeAllBrowsers"}

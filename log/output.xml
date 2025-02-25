@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2 (Python 3.13.1 on darwin)" generated="2025-02-25T11:20:47.051668" rpa="false" schemaversion="5">
+<suite id="s1" name="Login Test" source="/Users/cwilfrid/AquaProjects/poc-robot-framework-playwright/TESTS/login_test.robot">
+<kw name="Ouvrir Le Navigateur" owner="common" type="SETUP">
+<kw name="New Browser">
+<msg time="2025-02-25T11:20:47.068252" level="FAIL">No keyword with name 'New Browser' found.</msg>
+<arg>browser=${BROWSER}</arg>
+<arg>headless=${HEADLESS}</arg>
+<status status="FAIL" start="2025-02-25T11:20:47.068198" elapsed="0.000101">No keyword with name 'New Browser' found.</status>
+</kw>
+<kw name="New Page">
+<arg>${URL}</arg>
+<status status="NOT RUN" start="2025-02-25T11:20:47.068377" elapsed="0.000169"/>
+</kw>
+<status status="FAIL" start="2025-02-25T11:20:47.067733" elapsed="0.000879">No keyword with name 'New Browser' found.</status>
+</kw>
+<test id="s1-t1" name="Test De Login" line="16">
+<status status="FAIL" start="2025-02-25T11:20:47.068656" elapsed="0.000157">Parent suite setup failed:
+No keyword with name 'New Browser' found.</status>
+</test>
+<kw name="Fermer Le Navigateur" owner="common" type="TEARDOWN">
+<kw name="Close Browser">
+<msg time="2025-02-25T11:20:47.069387" level="FAIL">No keyword with name 'Close Browser' found.</msg>
+<status status="FAIL" start="2025-02-25T11:20:47.069357" elapsed="0.000066">No keyword with name 'Close Browser' found.</status>
+</kw>
+<status status="FAIL" start="2025-02-25T11:20:47.069028" elapsed="0.000451">No keyword with name 'Close Browser' found.</status>
+</kw>
+<status status="FAIL" start="2025-02-25T11:20:47.057404" elapsed="0.012107">Suite setup failed:
+No keyword with name 'New Browser' found.
+
+Also suite teardown failed:
+No keyword with name 'Close Browser' found.</status>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Login Test" id="s1" pass="0" fail="1" skip="0">Login Test</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2025-02-25T11:20:47.065511" level="ERROR">Error in file '/Users/cwilfrid/AquaProjects/poc-robot-framework-playwright/RESOURCES/PAGES/login_page.resource' on line 2: Importing library 'Browser' failed: ModuleNotFoundError: No module named 'Browser'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  /Users/cwilfrid/Library/Application Support/JetBrains/Aqua2024.3/plugins/robotframework-intellij/lib/robotframework_debug_adapter
+  /Users/cwilfrid/AquaProjects/poc-robot-framework-playwright
+  /Users/cwilfrid/Library/Application Support/JetBrains/Aqua2024.3/plugins/robotframework-intellij/lib
+  /Users/cwilfrid/Library/Application Support/JetBrains/Aqua2024.3/plugins/robotframework-intellij/lib/robotframework_ls/vendored
+  /Library/Frameworks/Python.framework/Versions/3.13/lib/python313.zip
+  /Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13
+  /Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/lib-dynload
+  /Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages</msg>
+<msg time="2025-02-25T11:20:47.067078" level="ERROR">Error in file '/Users/cwilfrid/AquaProjects/poc-robot-framework-playwright/RESOURCES/common.resource' on line 2: Importing library 'Browser' failed: ModuleNotFoundError: No module named 'Browser'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  /Users/cwilfrid/Library/Application Support/JetBrains/Aqua2024.3/plugins/robotframework-intellij/lib/robotframework_debug_adapter
+  /Users/cwilfrid/AquaProjects/poc-robot-framework-playwright
+  /Users/cwilfrid/Library/Application Support/JetBrains/Aqua2024.3/plugins/robotframework-intellij/lib
+  /Users/cwilfrid/Library/Application Support/JetBrains/Aqua2024.3/plugins/robotframework-intellij/lib/robotframework_ls/vendored
+  /Library/Frameworks/Python.framework/Versions/3.13/lib/python313.zip
+  /Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13
+  /Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/lib-dynload
+  /Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages</msg>
+</errors>
+</robot>

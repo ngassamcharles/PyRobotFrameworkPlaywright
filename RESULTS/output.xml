@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.13.1 on darwin)" generated="2025-02-25T11:45:18.564517" rpa="false" schemaversion="5">
+<suite id="s1" name="Login Test" source="/Users/cwilfrid/AquaProjects/poc-robot-framework-playwright/tests/login_test.robot">
+<kw name="Ouvrir Le Navigateur" owner="common" type="SETUP">
+<kw name="New Browser" owner="Browser">
+<msg time="2025-02-25T11:45:18.616559" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "/Users/cwilfrid/AquaProjects/poc-robot-framework-playwright/results/browser/traces/temp/9bc23e1e-6b33-4e80-b91a-0a075f279716"}</msg>
+<msg time="2025-02-25T11:45:18.638988" level="INFO">Starting Browser process /Users/cwilfrid/AquaProjects/poc-robot-framework-playwright/.venv/lib/python3.13/site-packages/Browser/wrapper/index.js using port 54264</msg>
+<msg time="2025-02-25T11:45:18.639107" level="INFO">Node startup parameters: ['node', '/Users/cwilfrid/AquaProjects/poc-robot-framework-playwright/.venv/lib/python3.13/site-packages/Browser/wrapper/index.js', '54264']</msg>
+<msg time="2025-02-25T11:45:20.199154" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"/Users/cwilfrid/AquaProjects/poc-robot-framework-playwright/results/browser/traces/temp/9bc23e1e-6b33-4e80-b91a-0a075f279716"}</msg>
+<arg>browser=${BROWSER}</arg>
+<arg>headless=${HEADLESS}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<status status="PASS" start="2025-02-25T11:45:18.616274" elapsed="1.583258"/>
+</kw>
+<kw name="New Page" owner="Browser">
+<msg time="2025-02-25T11:45:20.830480" level="INFO">Successfully initialized new page object and opened url: https://www.saucedemo.com</msg>
+<msg time="2025-02-25T11:45:20.830541" level="INFO">No context was open. New context was automatically opened when this page is created.</msg>
+<arg>${URL}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="PASS" start="2025-02-25T11:45:20.199896" elapsed="0.630759"/>
+</kw>
+<status status="PASS" start="2025-02-25T11:45:18.616034" elapsed="2.214723"/>
+</kw>
+<test id="s1-t1" name="Test De Login" line="16">
+<kw name="Entrer le username" owner="login_page">
+<kw name="Fill Text" owner="Browser">
+<msg time="2025-02-25T11:45:20.836117" level="INFO">Fills the text 'standard_user' in the given field.</msg>
+<arg>${USERNAME_INPUT}</arg>
+<arg>${username}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2025-02-25T11:45:20.835840" elapsed="0.017955"/>
+</kw>
+<arg>${USERNAME}</arg>
+<status status="PASS" start="2025-02-25T11:45:20.835551" elapsed="0.018328"/>
+</kw>
+<kw name="Entrer le password" owner="login_page">
+<kw name="Fill Text" owner="Browser">
+<msg time="2025-02-25T11:45:20.854492" level="INFO">Fills the text 'secret_sauce' in the given field.</msg>
+<arg>${PASSWORD_INPUT}</arg>
+<arg>${password}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2025-02-25T11:45:20.854251" elapsed="0.028720"/>
+</kw>
+<arg>${PASSWORD}</arg>
+<status status="PASS" start="2025-02-25T11:45:20.854020" elapsed="0.029029"/>
+</kw>
+<kw name="Login" owner="login_page">
+<kw name="Click" owner="Browser">
+<msg time="2025-02-25T11:45:20.883799" level="INFO">Clicks the element '#login-button'.</msg>
+<arg>${LOGIN_BUTTON}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-02-25T11:45:20.883507" elapsed="0.135026"/>
+</kw>
+<status status="PASS" start="2025-02-25T11:45:20.883194" elapsed="0.135405"/>
+</kw>
+<msg time="2025-02-25T11:45:21.020003" level="INFO">Set timeout to: 10000</msg>
+<status status="PASS" start="2025-02-25T11:45:20.830853" elapsed="0.187846"/>
+</test>
+<kw name="Fermer Le Navigateur" owner="common" type="TEARDOWN">
+<kw name="Close Browser" owner="Browser">
+<msg time="2025-02-25T11:45:21.418355" level="INFO">Closed browser</msg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-02-25T11:45:21.022846" elapsed="0.395592"/>
+</kw>
+<status status="PASS" start="2025-02-25T11:45:21.022660" elapsed="0.395829"/>
+</kw>
+<status status="PASS" start="2025-02-25T11:45:18.565287" elapsed="2.853221"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Login Test" id="s1" pass="1" fail="0" skip="0">Login Test</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
