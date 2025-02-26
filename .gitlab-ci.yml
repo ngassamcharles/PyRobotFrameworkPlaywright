@@ -1,4 +1,4 @@
-image: python:3.13  # Utilisation d'une image Python sur GitLab Runner
+image: python:3.11  # Utilisation d'une image Python stable
 
 stages:
   - install
@@ -10,47 +10,42 @@ variables:
   PLAYWRIGHT_BROWSERS_PATH: "$CI_PROJECT_DIR/.cache/playwright"
 
 before_script:
-  - apt-get update && apt-get install -y curl
+  - apt-get update && apt-get install -y curl xvfb
   - curl -fsSL https://deb.nodesource.com/setup_lts.x | bash -
   - apt-get install -y nodejs
   - node --version
   - npm --version
-
-script:
   - python3 -m venv venv
   - source venv/bin/activate
   - pip install --upgrade pip
   - pip install -r requirements.txt
-  - rfbrowser init
+  - rfbrowser init  # Installe les navigateurs et les dépendances nécessaires
 
 cache:
   key: ${CI_COMMIT_REF_SLUG}
   paths:
     - .cache/pip
     - .cache/playwright
-install-browser-library:
-  stage: install
-  script:
-    - source venv/bin/activate
-    - rfbrowser init  # Installe les navigateurs et la librairie
-  only:
-    - main
 
 run-tests:
   stage: test
+  dependencies:
+    - install
   script:
     - source venv/bin/activate
     - xvfb-run robot --outputdir results tests/
   artifacts:
     paths:
       - results/
-    expire_in: 1 days
+    expire_in: 1 day
   only:
     - main
 
 generate-report:
   stage: report
+  dependencies:
+    - run-tests
   script:
-    - echo "Génération du rapport de test"
+    - echo "📊 Génération du rapport de test"
   only:
     - main
