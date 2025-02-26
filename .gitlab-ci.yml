@@ -15,7 +15,6 @@ before_script:
   - apt-get install -y nodejs
   - node --version
   - npm --version
-  - ls -R
 
 install-requirements:
   stage: install
