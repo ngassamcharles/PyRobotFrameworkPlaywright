@@ -21,5 +21,5 @@ Test De Login UI
     Entrer le username    ${USERNAME}
     Entrer le password    ${PASSWORD}
     Login
-    Generer Rapport Personnelle   ${OUTPUT_FILE}
+#    Generer Rapport Personnelle   ${OUTPUT_FILE}
 
