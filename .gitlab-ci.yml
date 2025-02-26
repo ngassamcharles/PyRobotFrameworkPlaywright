@@ -15,22 +15,26 @@ before_script:
   - apt-get install -y nodejs
   - node --version
   - npm --version
-  - python3 -m venv venv
-  - source venv/bin/activate
-  - pip install --upgrade pip
-  - pip install -r requirements.txt
-  - rfbrowser init  # Installe les navigateurs et les dépendances nécessaires
 
-cache:
-  key: ${CI_COMMIT_REF_SLUG}
-  paths:
-    - .cache/pip
-    - .cache/playwright
+install-requirements:
+  stage: install
+  script:
+    - python3 -m venv venv
+    - source venv/bin/activate
+    - pip install --upgrade pip
+    - pip install -r requirements.txt
+    - rfbrowser init  # Installe les navigateurs et les dépendances nécessaires
+  artifacts:
+    paths:
+      - venv/
+    expire_in: 1 day
+  only:
+    - main
 
 run-tests:
   stage: test
   dependencies:
-    - install
+    - install-requirements
   script:
     - source venv/bin/activate
     - xvfb-run robot --outputdir results tests/
