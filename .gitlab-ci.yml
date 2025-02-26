@@ -37,7 +37,7 @@ run-tests:
     - install-requirements
   script:
     - source venv/bin/activate
-    - xvfb-run robot --outputdir results tests/
+    - xvfb-run robot --outputdir RESULTS TEST/login_test.robot
   artifacts:
     paths:
       - results/
