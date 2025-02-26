@@ -10,12 +10,18 @@ variables:
   PLAYWRIGHT_BROWSERS_PATH: "$CI_PROJECT_DIR/.cache/playwright"
 
 before_script:
-  - echo "Démarrage du pipeline GitLab CI/CD 🚀"
-  - apt-get update && apt-get install -y curl unzip xvfb
+  - apt-get update && apt-get install -y curl
+  - curl -fsSL https://deb.nodesource.com/setup_lts.x | bash -
+  - apt-get install -y nodejs
+  - node --version
+  - npm --version
+
+script:
   - python3 -m venv venv
   - source venv/bin/activate
   - pip install --upgrade pip
   - pip install -r requirements.txt
+  - rfbrowser init
 
 cache:
   key: ${CI_COMMIT_REF_SLUG}
