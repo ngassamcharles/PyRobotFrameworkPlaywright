@@ -1,0 +1,50 @@
+image: python:3.13  # Utilisation d'une image Python sur GitLab Runner
+
+stages:
+  - install
+  - test
+  - report
+
+variables:
+  PIP_CACHE_DIR: "$CI_PROJECT_DIR/.cache/pip"
+  PLAYWRIGHT_BROWSERS_PATH: "$CI_PROJECT_DIR/.cache/playwright"
+
+before_script:
+  - echo "Démarrage du pipeline GitLab CI/CD 🚀"
+  - apt-get update && apt-get install -y curl unzip xvfb
+  - python3 -m venv venv
+  - source venv/bin/activate
+  - pip install --upgrade pip
+  - pip install -r requirements.txt
+
+cache:
+  key: ${CI_COMMIT_REF_SLUG}
+  paths:
+    - .cache/pip
+    - .cache/playwright
+install-browser-library:
+  stage: install
+  script:
+    - source venv/bin/activate
+    - rfbrowser init  # Installe les navigateurs et la librairie
+  only:
+    - main
+
+run-tests:
+  stage: test
+  script:
+    - source venv/bin/activate
+    - xvfb-run robot --outputdir results tests/
+  artifacts:
+    paths:
+      - results/
+    expire_in: 1 days
+  only:
+    - main
+
+generate-report:
+  stage: report
+  script:
+    - echo "Génération du rapport de test"
+  only:
+    - main
