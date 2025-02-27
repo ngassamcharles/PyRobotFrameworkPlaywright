@@ -1,3 +1,4 @@
 robotframework
 robotframework-browser
 browserstack-local
+browserstack-sdk
