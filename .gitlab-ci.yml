@@ -19,6 +19,7 @@ before_script:
   - apt-get install -y nodejs
   - node --version
   - npm --version
+  - npx playwright install # Installation de playwright
   - npx playwright install-deps  # Installation des dépendances systeme pour Playwright
   - npm install -g browserstack-local  # Installation de l'agent local de BrowserStack
 
@@ -30,7 +31,6 @@ install-requirements:
     - source venv/bin/activate
     - pip install --upgrade pip
     - pip install -r requirements.txt
-    - npx playwright install # Installation de playwright
     - rfbrowser init  # Installe les navigateurs et les dépendances nécessaires
   artifacts:
     paths:
