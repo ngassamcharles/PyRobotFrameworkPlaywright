@@ -8,6 +8,8 @@ stages:
 variables:
   PIP_CACHE_DIR: "$CI_PROJECT_DIR/.cache/pip"
   PLAYWRIGHT_BROWSERS_PATH: "$CI_PROJECT_DIR/.cache/playwright"
+  BROWSERSTACK_USERNAME: "charles_w6Q0CS"
+  BROWSERSTACK_ACCESS_KEY: "spbbKRqHNCx5van7hESn"
 
 before_script:
   - rm -rf ~/.cache/ms-playwright
@@ -17,8 +19,8 @@ before_script:
   - apt-get install -y nodejs
   - node --version
   - npm --version
-  - npx playwright install # Installation de playwtight
   - npx playwright install-deps  # Installation des dépendances systeme pour Playwright
+  - npm install -g browserstack-local  # Installation de l'agent local de BrowserStack
 
 
 install-requirements:
@@ -28,6 +30,7 @@ install-requirements:
     - source venv/bin/activate
     - pip install --upgrade pip
     - pip install -r requirements.txt
+    - npx playwright install # Installation de playwright
     - rfbrowser init  # Installe les navigateurs et les dépendances nécessaires
   artifacts:
     paths:
@@ -43,6 +46,23 @@ run-tests:
   script:
     - source venv/bin/activate
     - xvfb-run robot --outputdir RESULTS TESTS/login_test.robot
+  artifacts:
+    paths:
+      - results/
+    expire_in: 1 day
+  only:
+    - main
+
+run-tests-browserstack:
+  stage: test
+  dependencies:
+    - install-requirements
+  script:
+    - source venv/bin/activate
+    - browserstack-local --key $BROWSERSTACK_ACCESS_KEY &  # Démarre BrowserStack Local en arrière-plan
+    - export ROBOT_BROWSERSTACK_USERNAME="$BROWSERSTACK_USERNAME"
+    - export ROBOT_BROWSERSTACK_ACCESS_KEY="$BROWSERSTACK_ACCESS_KEY"
+    - xvfb-run robot --outputdir RESULTS TESTS/login_test.robot  # Exécute les tests sur BrowserStack
   artifacts:
     paths:
       - results/
