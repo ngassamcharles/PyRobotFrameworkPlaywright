@@ -8,8 +8,6 @@ stages:
 variables:
   PIP_CACHE_DIR: "$CI_PROJECT_DIR/.cache/pip"
   PLAYWRIGHT_BROWSERS_PATH: "$CI_PROJECT_DIR/.cache/playwright"
-  BROWSERSTACK_USERNAME: "charles_w6Q0CS"
-  BROWSERSTACK_ACCESS_KEY: "spbbKRqHNCx5van7hESn"
 
 before_script:
   - rm -rf ~/.cache/ms-playwright
@@ -59,10 +57,10 @@ run-tests-browserstack:
     - install-requirements
   script:
     - source venv/bin/activate
-    - browserstack-local --key $BROWSERSTACK_ACCESS_KEY &  # Démarre BrowserStack Local en arrière-plan
-    - export ROBOT_BROWSERSTACK_USERNAME="$BROWSERSTACK_USERNAME"
-    - export ROBOT_BROWSERSTACK_ACCESS_KEY="$BROWSERSTACK_ACCESS_KEY"
-    - xvfb-run robot --outputdir RESULTS TESTS/login_test.robot  # Exécute les tests sur BrowserStack
+    - browserstack-local --key "$(yq '.browserstack.accessKey' browserstack.yaml)" --verbose &  # Démarre BrowserStack Local
+    - export BROWSERSTACK_USERNAME="$(yq '.browserstack.username' browserstack.yaml)"
+    - export BROWSERSTACK_ACCESS_KEY="$(yq '.browserstack.accessKey' browserstack.yaml)"
+    - xvfb-run robot --variablefile browserstack.yaml --outputdir RESULTS TESTS/login_test.robot  # Exécute les tests avec BrowserStack
   artifacts:
     paths:
       - results/
