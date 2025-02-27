@@ -10,12 +10,15 @@ variables:
   PLAYWRIGHT_BROWSERS_PATH: "$CI_PROJECT_DIR/.cache/playwright"
 
 before_script:
+  - rm -rf ~/.cache/ms-playwright
+  - rm -rf /builds/sdet2025/robot/.cache/playwright  # Supprime les anciennes installations
   - apt-get update && apt-get install -y curl xvfb
   - curl -fsSL https://deb.nodesource.com/setup_lts.x | bash -
   - apt-get install -y nodejs
   - node --version
   - npm --version
-  - npx playwright install-deps  # Installation des dépendances pour Playwright
+  - npx playwright install # Installation de playwtight
+  - npx playwright install-deps  # Installation des dépendances systeme pour Playwright
 
 
 install-requirements:
